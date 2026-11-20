@@ -822,7 +822,7 @@ function OrderDetail({ initialOrder, session, onBack, onChanged, onClaim }) {
                 </div>
               </div>
             ))}
-            {!messages.length && !loadingChat && <div className="no-messages"><MessageCircle size={18} /><span>هنوز گفت‌وگویی شروع نشده است.</span></div>}
+            {!messages.length && chatLoaded && <div className="no-messages"><MessageCircle size={18} /><span>هنوز گفت‌وگویی شروع نشده است.</span></div>}
             <div ref={endRef} />
           </div>
           <form className="composer" onSubmit={sendMessage}>
