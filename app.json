@@ -2,7 +2,7 @@
   "expo": {
     "name": "coffeenet_app",
     "slug": "coffeenet_app",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "coffeenetapp",
@@ -26,17 +26,44 @@
     "plugins": [
       "expo-router",
       [
+        "expo-image-picker",
+        {
+          "photosPermission": "برای ارسال تصویر در گفت‌وگوی سفارش، اجازهٔ دسترسی به تصاویر لازم است.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "backgroundColor": "#208AEF",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "برای تکمیل خدمات انتخابی یا ارسال موقعیت مکانی در گفت‌وگو، با اجازهٔ شما از موقعیت فعلی استفاده می‌شود."
+        }
+      ],
+      "@react-native-community/datetimepicker"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "53f1fd33-727b-4909-9abe-085556f46a1f"
+      }
+    },
+    "owner": "amirparvinazar"
   }
 }
